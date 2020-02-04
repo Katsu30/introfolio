@@ -1,35 +1,34 @@
 <template>
 	<v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+		app
+		color="primary"
+		dark
+		>
+		<div class="d-flex align-center">
+			<v-img
+			alt="Vuetify Logo"
+			class="shrink mr-2"
+			contain
+			src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+			transition="scale-transition"
+			width="40"
+			/>
 
-        <div>
-			<span id="logo">Introfolio</span>
+			<div>
+				<router-link to='/'>
+					<span id="logo" class="links">Introfolio</span>
+				</router-link>
+			</div>
 		</div>
-      </div>
 
-      <v-spacer></v-spacer>
+		<v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+		<v-btn v-for="(item, index) in items" :key="index" text>
+			<router-link v-bind:to=item.path>
+				<span class="links">{{ item.title }}</span>
+			</router-link>
+		</v-btn>
+		</v-app-bar>
 </template>
 
 <script>
@@ -39,6 +38,11 @@
 	},
 	data () {
 			return {
+				items: [
+					{ title: 'About', path: '/about' },
+					{ title: 'Skills', path: '/skills' },
+					{ title: 'Contact', path: '/contact' }
+				]
 			}
 		}
 	}
@@ -47,5 +51,10 @@
 <style scope>
 	#logo {
 		font-size: 1.5rem;
+	}
+	.links {
+		color: white;
+		text-decoration: none;
+		vertical-align: middle;
 	}
 </style>

@@ -1,8 +1,9 @@
 <template>
   <v-app>
     <NavHeader />
-    <router-link to="/">Go to home</router-link>
-    <router-view/>
+    <v-content>
+          <router-view/>
+    </v-content>
   </v-app>
 </template>
 
@@ -21,3 +22,11 @@ export default {
   }),
 };
 </script>
+
+<style scope>
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+</style>
