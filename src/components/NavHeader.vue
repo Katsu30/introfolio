@@ -1,16 +1,35 @@
 <template>
-	<nav id='nav-bar'>
-		<div id='header-left'>
-			{{ logo.name }}
+	<v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <div>
+			<span id="logo">Introfolio</span>
 		</div>
-		<div id="header-right">
-			<ol>
-				<li v-for="(item, index) in menu" :key=index class="list-items">
-					{{ item.title }}
-				</li>
-			</ol>
-		</div>
-	</nav>
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
 </template>
 
 <script>
@@ -20,34 +39,13 @@
 	},
 	data () {
 			return {
-				logo: {
-					name: 'Portfolio'
-				},
-				menu: [
-					{title: 'Top', path: '/'},
-					{title: 'About', path: '/about'},
-					{title: 'Works', path: '/works'},
-					{title: 'Contact', path: '/contact'}
-				],
 			}
 		}
 	}
 </script>
 
 <style scope>
-	#nav-bar {
-		height: 60px;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		background-color: lightblue;
-	}
-	.header-left {
-		position: fixed;
-		top: 50%;
-		left: 3rem;
-	}
-	.list-items {
-		list-style-type: none;
+	#logo {
+		font-size: 1.5rem;
 	}
 </style>
