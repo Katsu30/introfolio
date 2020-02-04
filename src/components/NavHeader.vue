@@ -13,11 +13,12 @@
 	</nav>
 </template>
 
-
 <script>
 	export default {
-		name: 'NavHeader',
-		data () {
+	name: 'NavHeader',
+	props: {
+	},
+	data () {
 			return {
 				logo: {
 					name: 'Portfolio'
@@ -42,8 +43,9 @@
 		background-color: lightblue;
 	}
 	.header-left {
-		position: relative;
-		left: 1rem;
+		position: fixed;
+		top: 50%;
+		left: 3rem;
 	}
 	.list-items {
 		list-style-type: none;
