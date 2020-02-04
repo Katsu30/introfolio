@@ -40,7 +40,7 @@
 			return {
 				items: [
 					{ title: 'About', path: '/about' },
-					{ title: 'Skills', path: '/skills' },
+					{ title: 'Works', path: '/works' },
 					{ title: 'Contact', path: '/contact' }
 				]
 			}
