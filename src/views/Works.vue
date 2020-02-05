@@ -4,32 +4,33 @@
     <v-container>
       <v-row>
         <v-col cols="6">
-          <div class="items">1</div>
+          <PortfolioWorks :works="'1'" />
         </v-col>
         <v-col cols="6">
-          <div class="items">2</div>
+          <PortfolioWorks :works="'2'" />
         </v-col>
         <v-col cols="6">
-          <div class="items">3</div>
+          <PortfolioWorks :works="'3'" />
         </v-col>
         <v-col cols="6">
-          <div class="items">4</div>
+          <PortfolioWorks :works="'4'" />
         </v-col>
       </v-row>
     </v-container>
   </div>
 </template>
 
+<script>
+import PortfolioWorks from '../components/PortfolioWorks';
+
+export default {
+  name: 'works',
+  components: {
+    PortfolioWorks,
+  },
+}
+</script>
+
 <style scoped>
-  .items {
-    height: 100%;
-    width: 100%;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    border: 3px solid #ccc;
-    background-color: #ddd;
-  }
+
 </style>

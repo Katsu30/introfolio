@@ -1,10 +1,23 @@
 <template>
   <div class="container">
-    <div class="item box-big1">A</div>
-    <div class="item box-big2">B</div>
-    <div class="item">C</div>
-    <div class="item box-big3">D</div>
-    <div class="item">E</div>
+    <div class="item box-big1">
+      <h1>Profile</h1>
+      <div class="box">
+
+      </div>
+    </div>
+    <div class="item box-big2">
+      <h1>History</h1>
+    </div>
+    <div class="item">
+      <h1>Skills</h1>
+    </div>
+    <div class="item box-big3">
+      <h1>Likes</h1>
+    </div>
+    <div class="item">
+      <h1>Others</h1>
+    </div>
   </div>
 </template>
 
