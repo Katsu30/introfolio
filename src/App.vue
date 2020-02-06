@@ -2,7 +2,8 @@
   <v-app>
     <NavHeader />
     <v-content>
-          <router-view/>
+      {{ message }}
+      <router-view/>
     </v-content>
     <GrobalFooter />
   </v-app>
@@ -18,7 +19,12 @@ export default {
   components: {
     NavHeader,
     GrobalFooter,
+  },
 
+  computed: {
+    message : function() {
+      return this.$store.state.message
+    },
   },
 
   data: () => ({

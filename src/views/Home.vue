@@ -1,5 +1,8 @@
 <template>
-  <h1>This is Home</h1>
+  <div>
+    <h1>This is Home</h1>
+    {{ $store.state.message }}
+  </div>
 </template>
 
 <script>

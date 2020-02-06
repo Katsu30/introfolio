@@ -22,7 +22,7 @@
 </template>
 
 <style scoped>
-  .container {
+.container {
   display: grid;
   gap: 10px;
   grid-template-columns: 3fr 3fr 4fr;
@@ -50,6 +50,9 @@
   grid-row: 2 / 4;
   background: #0ba;
   border-color: #098;
+}
+h1 {
+  font-family: AlfaSlabOne-Regular,sans-serif;
 }
 
 /* Responsive */
