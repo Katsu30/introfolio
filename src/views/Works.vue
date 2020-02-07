@@ -1,19 +1,29 @@
 <template>
   <div>
-    <h1>This is an skills page</h1>
+    <h1>WORKS</h1>
     <v-container>
       <v-row>
-        <v-col cols="6" class="workContainer">
+        <!-- <v-col cols="6">
           <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
         </v-col>
         <v-col cols="6">
-          <PortfolioWorks :works="'2'" />
+          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
         </v-col>
         <v-col cols="6">
-          <PortfolioWorks :works="'3'" />
+          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
         </v-col>
         <v-col cols="6">
-          <PortfolioWorks :works="'4'" />
+          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
+        </v-col> -->
+        <v-col cols="6" v-for="(work, index) in works" :key="index">
+          <WorkCard
+            :title="work.title"
+            :img="work.img"
+            :description="work.description"
+            :tags="work.tags"
+            :links="work.links"
+            :date="work.date"
+          />
         </v-col>
       </v-row>
     </v-container>
@@ -21,15 +31,20 @@
 </template>
 
 <script>
-import PortfolioWorks from '../components/PortfolioWorks';
+// import PortfolioWorks from '../components/PortfolioWorks';
 import WorkCard from '../components/modules/WorkCardModule';
 
 export default {
   name: 'works',
   components: {
-    PortfolioWorks,
+    // PortfolioWorks,
     WorkCard,
   },
+  computed: {
+    works: function(){
+      return this.$store.getters.works
+    }
+  }
 }
 </script>
 

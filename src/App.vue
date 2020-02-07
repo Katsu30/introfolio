@@ -2,7 +2,6 @@
   <v-app>
     <NavHeader />
     <v-content>
-      {{ message }}
       <router-view/>
     </v-content>
     <GrobalFooter />
@@ -37,7 +36,8 @@ export default {
   .container {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: auto;
     margin-bottom: 50px;
   }
 </style>
