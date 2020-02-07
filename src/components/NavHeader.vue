@@ -1,22 +1,14 @@
 <template>
 	<v-app-bar
 		app
-		color="primary"
-		dark
+		color="white"
+		flat
 		>
 		<div class="d-flex align-center">
-			<v-img
-			alt="Vuetify Logo"
-			class="shrink mr-2"
-			contain
-			src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-			transition="scale-transition"
-			width="40"
-			/>
 
 			<div>
-				<router-link to='/'>
-					<span id="logo" class="links">Introfolio</span>
+				<router-link to='/' class="links">
+					<span id="logo" class="linkTitle">Introfolio</span>
 				</router-link>
 			</div>
 		</div>
@@ -24,11 +16,11 @@
 		<v-spacer></v-spacer>
 
 		<v-btn v-for="(item, index) in items" :key="index" text>
-			<router-link v-bind:to=item.path>
-				<span class="links">{{ item.title }}</span>
+			<router-link class="links" v-bind:to=item.path>
+				<span class="linkTitle">{{ item.title }}</span>
 			</router-link>
 		</v-btn>
-		</v-app-bar>
+	</v-app-bar>
 </template>
 
 <script>
@@ -53,8 +45,17 @@
 		font-size: 1.5rem;
 	}
 	.links {
-		color: white;
 		text-decoration: none;
 		vertical-align: middle;
+		padding: 0.5rem 0.5rem;
+		border-radius: 5px;
+		transition: 5ms;
+	}
+	.links:hover {
+		background-color: rgb(245, 245, 245);
+	}
+	.linkTitle {
+		color: #4A4A4A;
+		transform: 5ms;
 	}
 </style>

@@ -3,18 +3,6 @@
     <h1>WORKS</h1>
     <v-container>
       <v-row>
-        <!-- <v-col cols="6">
-          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
-        </v-col>
-        <v-col cols="6">
-          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
-        </v-col>
-        <v-col cols="6">
-          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
-        </v-col>
-        <v-col cols="6">
-          <WorkCard :title="'Portfolio'" :img="'ImageSource'" :tags="'Vue.js'" :date="'2020-02-06'"/>
-        </v-col> -->
         <v-col cols="6" v-for="(work, index) in works" :key="index">
           <WorkCard
             :title="work.title"

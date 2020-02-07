@@ -194,8 +194,5 @@ h1 {
 }
 
 /* Layout */
-body {
-  padding: 10px;
-  font-family: sans-serif;
-}
+
 </style>

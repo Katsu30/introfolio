@@ -3,6 +3,20 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const Home = {
+  state: {
+    topMessage: 'KATSUHIRO SHIRAISHI',
+  },
+  mutations: {},
+  getters: {
+    getTopMessage (state) {
+      return state.topMessage
+    }
+  },
+  modules: {
+  }
+}
+
 const About = {
   nameSpaced: true,
   state: {
@@ -124,6 +138,7 @@ export default new Vuex.Store({
   mutations: {},
   getters: {},
   modules: {
+    Home,
     About,
     Works
   }

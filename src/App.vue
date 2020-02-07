@@ -33,11 +33,7 @@ export default {
 </script>
 
 <style scope>
-  .container {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    width: auto;
-    margin-bottom: 50px;
-  }
+body {
+  color: #35495D;
+}
 </style>
