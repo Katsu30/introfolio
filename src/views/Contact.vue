@@ -9,6 +9,8 @@
           v-model='name'
           :rules='nameRules'
           :counter='10'
+          type="name"
+          name="name"
           label="name"
           required
           outlined
@@ -17,6 +19,8 @@
         <v-text-field
           v-model="email"
           :rules='emailRules'
+          type="email"
+          name="email"
           label="E-mail"
           required
           outlined
@@ -25,6 +29,8 @@
         <v-text-field
           v-model="message"
           :rules='messageRules'
+          type="message"
+          name="message"
           label="Message"
           required
           auto-grow
