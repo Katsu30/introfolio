@@ -25,7 +25,6 @@ import WorkCard from '../components/modules/WorkCardModule';
 export default {
   name: 'works',
   components: {
-    // PortfolioWorks,
     WorkCard,
   },
   computed: {
@@ -37,9 +36,4 @@ export default {
 </script>
 
 <style scoped>
-  .workContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 </style>

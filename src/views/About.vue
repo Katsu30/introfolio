@@ -10,7 +10,7 @@
         <div class="ImagesWrapper ma-4" cols="4" >
           <div class="iconWrapper">
             <v-img
-            src="../assets/profile_avater.png"
+            :src="iconPass"
             max-width="100%"
             height="auto">
             </v-img>
@@ -18,7 +18,9 @@
 
           <div class="linksWrapper">
             <span v-for="(account, index) in accounts" :key="index">
-              <v-icon>{{ account.iconClasses }}</v-icon>
+              <a :href="account.url" target="_blank" class="accounts">
+                <v-icon>{{ account.iconClasses }}</v-icon>
+              </a>
             </span>
           </div>
         </div>
@@ -154,9 +156,6 @@ export default {
   grid-column: 2 / 3;
   grid-row: 2 / 4;
 }
-h1 {
-  font-family: AlfaSlabOne-Regular,sans-serif;
-}
 .skills {
   padding: 5px;
   margin: 5px;
@@ -176,6 +175,11 @@ h1 {
   margin: 5px;
   background-color: #FFDD56;
   border-radius: 6px;
+}
+
+.accounts {
+  text-decoration: none;
+  margin: 0.5rem;
 }
 
 /* Responsive */

@@ -32,7 +32,7 @@ const About = {
         color: 'color:#000000'
       }
     ],
-    iconPass: '../assets/profile_avater.png',
+    iconPass: require('../assets/profile_avater.png'),
 
     skills: [
       'PHP', 'Laravel', 'CakePHP', 'JavaScript', 'jQuery', 'Vue.js', 'Nuxt.js', 'React',
@@ -97,23 +97,27 @@ const Works = {
     works: [
       {
         title: 'portfolio',
-        img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
+        img: require('@/assets/portfolio.png'),
         description: 'Vue.jsで作ったポートフォリオです。Netlifyで公開しています。 ',
-        tags: 'mdi-vuejs',
+        tags: [
+          'vue.js', 'Netlify'
+        ],
         links: [
-          {name: 'page', icon: 'mdi-link-variant', url: 'https://vigorous-goldwasser-93e462.netlify.com/'},
+          {name: 'page', icon: 'mdi-link-variant', url: 'https://katsu07-portfolio.netlify.com/'},
           {name: 'source', icon: 'mdi-github-circle', url: 'https://github.com/Katsu30/introfolio'}
         ],
         date: '2020-02-06'
       },
       {
         title: 'ToDo with Vue.js',
-        img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
+        img: require('@/assets/todoVue.png'),
         description: 'Vue.jsを使用して作成したToDoリストです。ローカルホストに保存できるので、ブラウザを閉じてもToDoが残ります',
-        tags: 'mdi-vuejs',
+        tags: [
+          'vue.js', 'github Pages'
+        ],
         links: [
-          {name: 'page', icon: 'mdi-link-variant', url: 'https://vigorous-goldwasser-93e462.netlify.com/'},
-          {name: 'source', icon: 'mdi-github-circle', url: 'https://github.com/Katsu30/introfolio'}
+          {name: 'page', icon: 'mdi-link-variant', url: 'https://katsu30.github.io/todoList/'},
+          {name: 'source', icon: 'mdi-github-circle', url: 'https://github.com/Katsu30/todoList'}
         ],
         date: '2020-02-06'
       }

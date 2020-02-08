@@ -10,7 +10,6 @@
             v-on='on'
             class="white--text align-end"
             width="100%"
-            height="auto"
             :src="img"
         >
 
@@ -30,14 +29,14 @@
         </v-img>
 
 
-        <v-card-text >
+        <v-card-text>
           {{ description }}
         </v-card-text>
-        <v-icon>{{ tags }}</v-icon>
-        <v-divider></v-divider>
-        <div v-for="(link, index) in links" :key="index">
-            <a :href="link.url"><v-icon>{{ link.icon }}</v-icon></a>
-        </div>
+        <span v-for="(tag, index) in tags" :key="index" class="usingTags">{{ tag }}</span>
+        <v-divider class="divider"></v-divider>
+        <span v-for="(link, index) in links" :key="index" class="workLinks">
+            <a :href="link.url" target="_blank" class="linkIcon"><v-icon>{{ link.icon }}</v-icon></a>
+        </span>
         <v-spacer></v-spacer>
       </v-card>
     </v-dialog>
@@ -60,5 +59,22 @@ export default {
     border-radius: 8px;
     border: 3px solid #ccc;
     background-color: #ddd;
+}
+.linkIcon {
+  text-decoration: none;
+}
+.workLinks {
+  margin-right: 5px;
+}
+.usingTags {
+  padding: 5px;
+  margin-left: 5px;
+  background-color: #225193;
+  color: #FFFFFF;
+  border-radius: 6px;
+}
+.divider {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 </style>
