@@ -28,10 +28,8 @@
         >
         </v-img>
 
+        <p v-for="(text, index) in description" :key="index" class="workTexts">{{ text }}</p>
 
-        <v-card-text>
-          {{ description }}
-        </v-card-text>
         <span v-for="(tag, index) in tags" :key="index" class="usingTags">{{ tag }}</span>
         <v-divider class="divider"></v-divider>
         <span v-for="(link, index) in links" :key="index" class="workLinks">
@@ -59,6 +57,10 @@ export default {
     border-radius: 8px;
     border: 3px solid #ccc;
     background-color: #ddd;
+}
+.workTexts {
+  margin: 5px 10px;
+  font-size: 0.9em;
 }
 .linkIcon {
   text-decoration: none;

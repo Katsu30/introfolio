@@ -98,7 +98,10 @@ const Works = {
       {
         title: 'portfolio',
         img: require('@/assets/portfolio.png'),
-        description: 'Vue.jsで作ったポートフォリオです。Netlifyで公開しています。 ',
+        description: [
+          'Vue.jsで作ったポートフォリオです。Netlifyで公開しています。',
+          'Netlify Formsの使い方と、Vuetifyが初めてだったので苦労しましたが完成できました。'
+        ],
         tags: [
           'vue.js', 'Netlify'
         ],
@@ -111,7 +114,10 @@ const Works = {
       {
         title: 'ToDo with Vue.js',
         img: require('@/assets/todoVue.png'),
-        description: 'Vue.jsを使用して作成したToDoリストです。ローカルホストに保存できるので、ブラウザを閉じてもToDoが残ります',
+        description: [
+          'Vue.jsを使用して作成したToDoリストです。',
+          'ローカルDBに保存できるので、ブラウザを閉じてもToDoが残ります。'
+        ],
         tags: [
           'vue.js', 'github Pages'
         ],

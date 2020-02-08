@@ -38,5 +38,12 @@ export default {
   .message {
     font-size: 1.5rem;
   }
-
+@media (max-width: 600px) {
+  #topName {
+    font-size: 2rem;
+  }
+  .message {
+    font-size: 0.9rem;
+  }
+}
 </style>

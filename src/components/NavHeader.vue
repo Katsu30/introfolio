@@ -3,11 +3,12 @@
 		app
 		color="white"
 		flat
+		id="grobalHeader"
 		>
 		<div class="d-flex align-center">
 
 			<div>
-				<router-link to='/' class="links">
+				<router-link to='/' class="topLink">
 					<span id="logo" class="linkTitle">Introfolio</span>
 				</router-link>
 			</div>
@@ -15,11 +16,14 @@
 
 		<v-spacer></v-spacer>
 
-		<v-btn v-for="(item, index) in items" :key="index" text>
+		<span v-for="(item, index) in items" :key="index" text>
 			<router-link class="links" v-bind:to=item.path>
 				<span class="linkTitle">{{ item.title }}</span>
 			</router-link>
-		</v-btn>
+		</span>
+		<span class="hamburger">
+			<v-icon>mdi-menu</v-icon>
+		</span>
 	</v-app-bar>
 </template>
 
@@ -44,7 +48,7 @@
 	#logo {
 		font-size: 1.5rem;
 	}
-	.links {
+	.links, .topLink {
 		text-decoration: none;
 		vertical-align: middle;
 		padding: 0.5rem 0.5rem;
@@ -58,4 +62,17 @@
 		color: #4A4A4A;
 		transform: 5ms;
 	}
+	.hamburger {
+		display: none;
+	}
+
+
+@media (max-width: 768px) {
+	.links {
+		display: none;
+	}
+	.hamburger {
+		display: block;
+	}
+}
 </style>

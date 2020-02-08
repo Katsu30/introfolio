@@ -1,35 +1,38 @@
 <template>
-  <div>
+  <div id='contactContainer'>
     <h1>Contact</h1>
-    <div id="formContainer">
-          <v-form name="contact" method="POST" data-netlify="true" netlify class="">
-            <div id="formWrapper">
-            <input type="hidden" name="form-name" value="contact" />
-            <v-text-field
-              v-model='name'
-              :rules='nameRules'
-              :counter='10'
-              label="name"
-              required
-              class="items"></v-text-field>
+    <div class="contactWrapper">
+      <v-form name="contact" method="POST" data-netlify="true" netlify class="formWrapper">
+        <p>お仕事の依頼やご相談などございましたら、お気軽にご連絡をお願いいたします</p>
+        <input type="hidden" name="form-name" value="contact" />
+        <v-text-field
+          v-model='name'
+          :rules='nameRules'
+          :counter='10'
+          label="name"
+          required
+          outlined
+          class="items"></v-text-field>
 
-            <v-text-field
-              v-model="email"
-              :rules='emailRules'
-              label="E-mail"
-              required
-              class="items"></v-text-field>
+        <v-text-field
+          v-model="email"
+          :rules='emailRules'
+          label="E-mail"
+          required
+          outlined
+          class="items"></v-text-field>
 
-            <v-text-field
-              v-model="message"
-              :rules='messageRules'
-              label="Message"
-              required
-              class="items"></v-text-field>
+        <v-text-field
+          v-model="message"
+          :rules='messageRules'
+          label="Message"
+          required
+          auto-grow
+          outlined
+          class="items"></v-text-field>
 
-            <v-btn type="submit">Submit</v-btn>
-        </div>
-        </v-form>
+        <v-btn type="submit">Submit</v-btn>
+    </v-form>
     </div>
   </div>
 </template>
@@ -53,24 +56,25 @@ export default {
 </script>
 
 <style scoped>
-#formContainer {
-  min-width: 100%;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#formWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  height: 100%;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
 .items {
   width: 100%;
   height: auto;
+}
+#contactContainer {
+  height: 100%;
+  width: 100%;
+}
+.contactWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 80%;
 }
 </style>

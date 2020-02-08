@@ -2,7 +2,9 @@
   <v-app>
     <NavHeader />
     <v-content>
-      <router-view/>
+      <v-container>
+        <router-view/>
+      </v-container>
     </v-content>
     <GrobalFooter />
   </v-app>
@@ -35,5 +37,9 @@ export default {
 <style scope>
 body {
   color: #35495D;
+}
+.container {
+  width: 100%;
+  height: 100%;
 }
 </style>

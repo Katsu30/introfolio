@@ -1,8 +1,7 @@
 <template>
-<div class="container d-flex flex-column">
+<div class="container">
   <h1>About</h1>
   <div class="aboutWrapper">
-
 
     <div class="item box-big1">
 
@@ -183,8 +182,9 @@ export default {
 }
 
 /* Responsive */
-@media (max-width: 600px){
+@media (max-width: 768px){
   .container {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }

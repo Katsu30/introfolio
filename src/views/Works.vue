@@ -3,7 +3,7 @@
     <h1>WORKS</h1>
     <v-container>
       <v-row>
-        <v-col cols="6" v-for="(work, index) in works" :key="index">
+        <v-col cols="12" md="6" v-for="(work, index) in works" :key="index">
           <WorkCard
             :title="work.title"
             :img="work.img"
