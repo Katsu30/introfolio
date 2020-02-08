@@ -65,6 +65,8 @@ export default {
   width: 100%;
 }
 .contactWrapper {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
