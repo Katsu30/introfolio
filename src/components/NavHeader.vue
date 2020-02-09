@@ -21,9 +21,14 @@
 				<span class="linkTitle">{{ item.title }}</span>
 			</router-link>
 		</span>
-		<span class="hamburger">
+		<span @click="menuSwitch" id="hamburger">
 			<v-icon>mdi-menu</v-icon>
 		</span>
+		<div class="hamburgerItems">
+			<span v-for="(item, index) in items" :key="index">
+				<router-link :to="item.path">{{ item.title }}</router-link>
+			</span>
+		</div>
 	</v-app-bar>
 </template>
 
@@ -33,14 +38,20 @@
 	props: {
 	},
 	data () {
-			return {
-				items: [
-					{ title: 'About', path: '/about' },
-					{ title: 'Works', path: '/works' },
-					{ title: 'Contact', path: '/contact' }
-				]
-			}
+		return {
+			items: [
+				{ title: 'About', path: '/about' },
+				{ title: 'Works', path: '/works' },
+				{ title: 'Contact', path: '/contact' }
+			],
+			menuOpen: false
 		}
+	},
+	computed: {
+		menuSwitch: function(){
+			return !this.menuOpen
+		}
+	}
 	}
 </script>
 
@@ -62,7 +73,7 @@
 		color: #4A4A4A;
 		transform: 5ms;
 	}
-	.hamburger {
+	#hamburger, .hamburgerItems {
 		display: none;
 	}
 
@@ -71,8 +82,21 @@
 	.links {
 		display: none;
 	}
-	.hamburger {
+	#hamburger {
 		display: block;
+		position: fixed;
+		right: 1rem;
+		padding: 0.5rem;
+		border-radius: 50%;
+	}
+	#hamburger:hover {
+		background-color: rgb(245, 245, 245);
+	}
+	.hamburgerItems {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		top: 3.5rem;
 	}
 }
 </style>

@@ -38,6 +38,16 @@ export default {
   .message {
     font-size: 1.5rem;
   }
+
+@media (max-width: 768px) {
+  #topName {
+    font-size: 2.5rem;
+  }
+  .message {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 600px) {
   #topName {
     font-size: 2rem;
@@ -46,4 +56,14 @@ export default {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 375px) {
+  #topName {
+    font-size: 1.5rem;
+  }
+  .message {
+    font-size: 0.75rem;
+  }
+}
+
 </style>

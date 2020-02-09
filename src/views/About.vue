@@ -5,8 +5,10 @@
 
     <div class="item box-big1">
 
-      <v-row class="flex-nowrap">
-        <div class="ImagesWrapper ma-4" cols="4" >
+      <v-row>
+
+        <v-col class="ImagesWrapper" cols="12" md="4">
+
           <div class="iconWrapper">
             <v-img
             :src="iconPass"
@@ -22,15 +24,18 @@
               </a>
             </span>
           </div>
-        </div>
-        <div class="profileWrapper" cols="8">
+
+        </v-col>
+
+        <v-col class="profileWrapper" cols="12" md="8">
           <h2>Profile</h2>
           <p>Katsuhiro Shiraishi</p>
           <p>学生時代の留学経験を経て「自由な暮らし」を求めて新卒未経験でエンジニア就職。日々鍛錬しています</p>
           <p>プライベートでも開発を行っており、webサービスなどの個人開発を主にやっています。
             現在はLaravel、Vue.js、Reactを重点的に勉強しています。</p>
           <p>趣味は読書、映画鑑賞とランニング</p>
-        </div>
+        </v-col>
+
       </v-row>
     </div>
 
@@ -79,6 +84,7 @@
       </div>
     </div>
   </div>
+
 </div>
 </template>
 
@@ -190,10 +196,14 @@ export default {
   }
   .box-big1,
   .box-big2,
-  .box-big3
+  .box-big3,
+  .item
   {
     grid-column: 1;
     grid-row: auto;
+  }
+  .profileWrapper > p {
+    max-width: 100%;
   }
 }
 
