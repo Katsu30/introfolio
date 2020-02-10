@@ -1,6 +1,5 @@
 <template>
 <div class="container">
-<h1>About</h1>
   <div class="item box-big1">
     <div class="wrapper aboutWrapper">
 
