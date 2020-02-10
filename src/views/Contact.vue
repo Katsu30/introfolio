@@ -85,4 +85,10 @@ export default {
   flex-direction: column;
   min-width: 80%;
 }
+
+@media (max-width: 768px){
+  p {
+    font-size: 0.8rem;
+  }
+}
 </style>

@@ -35,11 +35,11 @@ export default {
 </script>
 
 <style scope>
-body {
-  color: #35495D;
-}
 .container {
   width: 100%;
   height: 100%;
+}
+h1 {
+  color: #555555;
 }
 </style>

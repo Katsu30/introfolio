@@ -1,83 +1,94 @@
 <template>
 <div class="container">
-  <h1>About</h1>
-  <div class="aboutWrapper">
+<h1>About</h1>
+  <div class="item box-big1">
+    <div class="wrapper aboutWrapper">
 
-    <div class="item box-big1">
-
-      <v-row>
-
-        <v-col class="ImagesWrapper" cols="12" md="4">
-
-          <div class="iconWrapper">
-            <v-img
+      <div class="imageWrapper">
+        <div class="iconWrapper">
+          <img
             :src="iconPass"
-            max-width="100%"
-            height="auto">
-            </v-img>
-          </div>
+            class="iconImage">
+        </div>
+        <div class="linksWrapper">
+          <span v-for="(account, index) in accounts" :key="index">
+            <a :href="account.url" target="_blank" class="accounts">
+              <v-icon>{{ account.iconClasses }}</v-icon>
+            </a>
+          </span>
+        </div>
+      </div>
 
-          <div class="linksWrapper">
-            <span v-for="(account, index) in accounts" :key="index">
-              <a :href="account.url" target="_blank" class="accounts">
-                <v-icon>{{ account.iconClasses }}</v-icon>
-              </a>
-            </span>
-          </div>
-
-        </v-col>
-
-        <v-col class="profileWrapper" cols="12" md="8">
-          <h2>Profile</h2>
-          <p>Katsuhiro Shiraishi</p>
+      <div class="profileWrapper">
+        <h2>Profile</h2>
+        <h3>Name: Katsuhiro Shiraishi</h3>
+        <div class="textarea">
           <p>学生時代の留学経験を経て「自由な暮らし」を求めて新卒未経験でエンジニア就職。日々鍛錬しています</p>
           <p>プライベートでも開発を行っており、webサービスなどの個人開発を主にやっています。
             現在はLaravel、Vue.js、Reactを重点的に勉強しています。</p>
           <p>趣味は読書、映画鑑賞とランニング</p>
-        </v-col>
+        </div>
+      </div>
 
-      </v-row>
     </div>
+  </div>
 
 
-    <div class="item box-big2">
+  <div class="item box-big2">
+    <div class="wrapper">
       <h2>History</h2>
-      <div class="historyWrapper">
-        <h3>2017.04</h3>
+
+      <h3 class="historyTitle">2017.04</h3>
+      <div class="textarea">
         <p>アメリカ留学。ネブラスカ州リンカーンという田舎町で１年間留学。<br>
-        「自由に暮らす」外国人たちに憧れ、将来は海外で自由に働くことを決意</p>
-        <h3>2018.05</h3>
+      「自由に暮らす」外国人たちに憧れ、将来は海外で自由に働くことを決意</p>
+      </div>
+
+      <h3 class="historyTitle">2018.05</h3>
+      <div class="textarea">
         <p>アメリカ留学から帰国。と、同時にプログラミング学習をスタート。何もわからないながらも試行錯誤し、ポートフォリオを作成。</p>
         <p>この時期にブログ執筆や、ライティングなどにも手を出してみるが、プログラミングに専念。</p>
-        <h3>2019.04</h3>
+      </div>
+
+      <h3 class="historyTitle">2019.04</h3>
+      <div class="textarea">
         <p>未経験ながらも自社開発の会社に就職。PHPやJavaScriptなどで開発を行いさまざまな経験を得る。</p>
-        <h3>2019.10</h3>
+      </div>
+
+      <h3 class="historyTitle">2019.10</h3>
+      <div class="textarea">
         <p>仕事にも慣れ、代わり映えのしない仕事にヤキモキ。プライベートでも開発を始め、自分のスキルを伸ばすことに力を注ぐ。現在はVue.jsやReactを勉強中</p>
       </div>
-    </div>
 
-    <div class="item">
+    </div>
+  </div>
+
+
+  <div class="item">
+    <div class="wrapper">
       <h2>Skills</h2>
       <div class="skillsWrapper">
         <p v-for="(skill, index) in skills" :key="index" class="skills"> {{ skill }} </p>
       </div>
     </div>
+  </div>
 
-    <div class="item box-big3">
+
+  <div class="item box-big3">
+    <div class="wrapper">
       <h2>Likes</h2>
-      <div class="likesWrapper">
         <div v-for="(like, index) in likes" :key="index">
-          <div>
             <h3>{{ like.name }}</h3>
-            <div class="likeItems">
+            <div class="likeItemsWrapper">
               <p v-for="(item, index) in like.items" :key="index" class="likes"> {{ item }} </p>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+  </div>
 
-    <div class="item">
+
+  <div class="item">
+    <div class="wrapper">
       <h2>Others</h2>
       <div class="skillsWrapper">
         <p v-for="(skill, index) in otherSkills" :key="index" class="skills"> {{ skill }} </p>
@@ -94,59 +105,49 @@ export default {
   components: {
 
   },
-  computed: {
-    accounts: function() {
-      return this.$store.getters.getAccounts
-    },
-    iconPass: function() {
-      return this.$store.getters.getIconPass
-    },
-    skills: function() {
-      return this.$store.getters.getSkills
-    },
-    otherSkills: function() {
-      return this.$store.getters.getOtherSkills
-    },
-    likes: function() {
-      return this.$store.getters.getLikes
-    }
-  }
+   computed: {
+     accounts: function() {
+       return this.$store.getters.getAccounts
+     },
+     iconPass: function() {
+       return this.$store.getters.getIconPass
+     },
+     skills: function() {
+       return this.$store.getters.getSkills
+     },
+     otherSkills: function() {
+       return this.$store.getters.getOtherSkills
+     },
+     likes: function() {
+       return this.$store.getters.getLikes
+     }
+   }
 }
 </script>
 
 <style scoped>
-.aboutWrapper {
-  display: grid;
-  gap: 10px;
-  width: 100%;
-  grid-template-columns: 3fr 3fr 4fr;
-  grid-template-rows: auto auto auto auto;
+h2 {
+  font-weight: bold;
+  font-size: 2.25rem;
+  color: #555555;
 }
-.ImagesWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 30%;
+h3 {
+  margin: 0.3rem;
+  color: #707070;
 }
-.iconWrapper {
-  max-width: 100%;
-}
-.skillsWrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.icons{
-  margin-top: 1rem;
-  font-size: 40px;
-}
+
+
 .item {
   background: #F5F5F5;
   padding: 10px;
   border-radius: 8px;
   border: 3px solid #F6F6F6;
+}
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 3fr 3fr 4fr;
+  grid-template-rows: auto auto auto auto;
 }
 .box-big1 {
   grid-column: 1 / 3;
@@ -161,6 +162,41 @@ export default {
   grid-column: 2 / 3;
   grid-row: 2 / 4;
 }
+.imageWrapper {
+  max-width: 45%;
+  display: flex;
+  margin-right: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutWrapper {
+  display: flex;
+  align-items: center;
+}
+.iconWrapper {
+  margin-right: 1rem;
+}
+.iconImage {
+  max-width: 100%;
+  border-radius: 5%;
+}
+.accounts {
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+.textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #E5E5E5;
+}
+
+.skillsWrapper,
+.likeItemsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 .skills {
   padding: 5px;
   margin: 5px;
@@ -168,13 +204,6 @@ export default {
   color: #FFFFFF;
   border-radius: 6px;
 }
-
-.likeItems {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
 .likes {
   padding: 5px;
   margin: 5px;
@@ -182,31 +211,26 @@ export default {
   border-radius: 6px;
 }
 
-.accounts {
-  text-decoration: none;
-  margin: 0.5rem;
-}
-
-/* Responsive */
 @media (max-width: 768px){
   .container {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
   .box-big1,
   .box-big2,
-  .box-big3,
-  .item
-  {
+  .box-big3 {
     grid-column: 1;
     grid-row: auto;
   }
-  .profileWrapper > p {
+  .aboutWrapper {
+    display: block;
+  }
+  .iconImage,
+  .iconWrapper,
+  .imageWrapper {
     max-width: 100%;
+    margin: 0 auto;
   }
 }
-
-/* Layout */
 
 </style>
