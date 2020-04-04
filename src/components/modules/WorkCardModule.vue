@@ -11,6 +11,7 @@
             class="white--text align-end"
             width="100%"
             :src="img"
+            min-height="350px"
         >
 
         </v-img>

@@ -96,6 +96,21 @@ const Works = {
   state: {
     works: [
       {
+        title: 'Gatsby.js Blog',
+        img: require('@/assets/gatsby.png'),
+        description: [
+          'Gatsby.jsで作った技術ブログです。Contentfulで記事管理、Netlifyで公開。React.jsの基礎は勉強していましたが、FWは初だったので多少てこずりました。',
+        ],
+        tags: [
+          'React.js', 'Gatsby.js', 'Contentful', 'Netlify'
+        ],
+        links: [
+          {name: 'page', icon: 'mdi-link-variant', url: 'https://katsu07.netlify.com/'},
+          {name: 'source', icon: 'mdi-github-circle', url: 'https://github.com/Katsu30/contentful-blog'}
+        ],
+        date: '2020-03-24'
+      },
+      {
         title: 'portfolio',
         img: require('@/assets/portfolio.png'),
         description: [
@@ -126,7 +141,7 @@ const Works = {
           {name: 'source', icon: 'mdi-github-circle', url: 'https://github.com/Katsu30/todoList'}
         ],
         date: '2020-02-06'
-      }
+      },
     ],
   },
   getters: {
