@@ -22,9 +22,9 @@
         <h2>Profile</h2>
         <h3>Name: Katsuhiro Shiraishi</h3>
         <div class="textarea">
-          <p>学生時代の留学経験を経て「自由な暮らし」を求めて新卒未経験でエンジニア就職。日々鍛錬しています</p>
-          <p>プライベートでも開発を行っており、webサービスなどの個人開発を主にやっています。
-            現在はLaravel、Vue.js、Reactを重点的に勉強しています。</p>
+          <p>学生時代の留学経験を経て「自由な暮らし」を求めてエンジニア就職。日々鍛錬しています</p>
+          <p>プライベートでも開発を行っており、webサービスなどの個人開発を主にやっています。</p>
+          <p>Laravel、Reactを重点的に勉強しています。個人的にいま興味があるのはPythonでのデータ分析とGolang</p>
           <p>趣味は読書、映画鑑賞とランニング</p>
         </div>
       </div>
@@ -37,26 +37,25 @@
     <div class="wrapper">
       <h2>History</h2>
 
-      <h3 class="historyTitle">2017.04</h3>
+      <h3 class="historyTitle">2018.05〜</h3>
       <div class="textarea">
-        <p>アメリカ留学。ネブラスカ州リンカーンという田舎町で１年間留学。<br>
-      「自由に暮らす」外国人たちに憧れ、将来は海外で自由に働くことを決意</p>
-      </div>
-
-      <h3 class="historyTitle">2018.05</h3>
-      <div class="textarea">
-        <p>アメリカ留学から帰国。と、同時にプログラミング学習をスタート。何もわからないながらも試行錯誤し、ポートフォリオを作成。</p>
+        <p>ネブラスカ州リンカーンという田舎町で１年間留学から帰国。と、同時にプログラミング学習スタート。何もわからないながらも試行錯誤し、ポートフォリオを作成。</p>
         <p>この時期にブログ執筆や、ライティングなどにも手を出してみるが、プログラミングに専念。</p>
       </div>
 
-      <h3 class="historyTitle">2019.04</h3>
+      <h3 class="historyTitle">2019.04〜</h3>
       <div class="textarea">
-        <p>未経験ながらも自社開発の会社に就職。PHPやJavaScriptなどで開発を行いさまざまな経験を得る。</p>
+        <p>未経験から自社開発の会社に就職。PHPやJavaScriptなどで開発を行いさまざまな経験を得る。プライベートでも開発を始め、自分のスキルを伸ばすことに力を注ぐ。Vue.jsやReactを勉強</p>
       </div>
 
-      <h3 class="historyTitle">2019.10</h3>
+      <h3 class="historyTitle">2020.07〜</h3>
       <div class="textarea">
-        <p>仕事にも慣れ、代わり映えのしない仕事にヤキモキ。プライベートでも開発を始め、自分のスキルを伸ばすことに力を注ぐ。現在はVue.jsやReactを勉強中</p>
+        <p>転職でVueの現場に参画。Laravel＆Vueというモダンな開発環境でスキルを伸ばす</p>
+      </div>
+
+      <h3 class="historyTitle">2020.10〜</h3>
+      <div class="textarea">
+        <p>Reactの現場に参画。React HooksやLaravelなどに触れる。React Hooksを使用したフロントエンドを中心に開発を行った。プライベートでは、PythonやGolangの言語の勉強開始</p>
       </div>
 
     </div>
@@ -67,7 +66,7 @@
     <div class="wrapper">
       <h2>Skills</h2>
       <div class="skillsWrapper">
-        <p v-for="(skill, index) in skills" :key="index" class="skills"> {{ skill }} </p>
+        <p v-for="(skill, skillsIndex) in skills" :key="skillsIndex" class="skills"> {{ skill }} </p>
       </div>
     </div>
   </div>
@@ -76,10 +75,10 @@
   <div class="item box-big3">
     <div class="wrapper">
       <h2>Likes</h2>
-        <div v-for="(like, index) in likes" :key="index">
+        <div v-for="(like, likesIndex) in likes" :key="likesIndex">
             <h3>{{ like.name }}</h3>
             <div class="likeItemsWrapper">
-              <p v-for="(item, index) in like.items" :key="index" class="likes"> {{ item }} </p>
+              <p v-for="(item, likeIndex) in like.items" :key="likeIndex" class="likes"> {{ item }} </p>
             </div>
         </div>
     </div>
@@ -90,7 +89,7 @@
     <div class="wrapper">
       <h2>Others</h2>
       <div class="skillsWrapper">
-        <p v-for="(skill, index) in otherSkills" :key="index" class="skills"> {{ skill }} </p>
+        <p v-for="(skill, skillsIndex) in otherSkills" :key="skillsIndex" class="skills"> {{ skill }} </p>
       </div>
     </div>
   </div>

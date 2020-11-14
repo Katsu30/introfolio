@@ -1,7 +1,6 @@
 <template>
   <div class="items">
     <v-dialog
-      v-model="dialog"
       max-width="500"
       max-height="auto"
     >
@@ -10,7 +9,7 @@
             v-on='on'
             class="white--text align-end"
             width="100%"
-            :src="img"
+            :src="work.img"
             min-height="350px"
         >
 
@@ -21,19 +20,19 @@
         <v-card-title
           class="headline grey lighten-2"
         >
-        {{ title }}
+        {{ work.title }}
         </v-card-title>
 
         <v-img
-            :src="img"
+            :src="work.img"
         >
         </v-img>
 
-        <p v-for="(text, index) in description" :key="index" class="workTexts">{{ text }}</p>
+        <p v-for="(text, textIndex) in work.description" :key="textIndex" class="workTexts">{{ text }}</p>
 
-        <span v-for="(tag, index) in tags" :key="index" class="usingTags">{{ tag }}</span>
+        <span v-for="(tag, tagsIndex) in work.tags" :key="tagsIndex" class="usingTags">{{ tag }}</span>
         <v-divider class="divider"></v-divider>
-        <span v-for="(link, index) in links" :key="index" class="workLinks">
+        <span v-for="(link, linksIndex) in work.links" :key="linksIndex" class="workLinks">
             <a :href="link.url" target="_blank" class="linkIcon"><v-icon>{{ link.icon }}</v-icon></a>
         </span>
         <v-spacer></v-spacer>
@@ -45,7 +44,7 @@
 <script>
 export default {
     name: 'WorkCard',
-    props: ['title', 'img', 'description', 'links', 'tags', 'date']
+    props: ['work'],
 }
 </script>
 
