@@ -5,12 +5,7 @@
       <v-row>
         <v-col cols="12" md="6" v-for="(work, index) in works" :key="index">
           <WorkCard
-            :title="work.title"
-            :img="work.img"
-            :description="work.description"
-            :tags="work.tags"
-            :links="work.links"
-            :date="work.date"
+            :work="work"
           />
         </v-col>
       </v-row>
