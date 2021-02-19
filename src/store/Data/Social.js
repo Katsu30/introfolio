@@ -1,7 +1,7 @@
 export const socials = [
   {
     iconClasses: 'mdi-twitter',
-    url: 'https://twitter.com/katsu07_',
+    url: 'https://twitter.com/saudi30_',
     color: 'color: #1da1f2;'
   },
   {
