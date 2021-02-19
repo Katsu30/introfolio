@@ -5,9 +5,7 @@
 
       <div class="imageWrapper">
         <div class="iconWrapper">
-          <img
-            :src="iconPass"
-            class="iconImage">
+          <img :src="iconPass" class="iconImage">
         </div>
         <div class="linksWrapper">
           <span v-for="(account, index) in accounts" :key="index">
@@ -100,9 +98,7 @@
 <script>
 export default {
   name: 'about',
-  components: {
-
-  },
+  components: {},
    computed: {
      accounts: function() {
        return this.$store.getters.getAccounts
